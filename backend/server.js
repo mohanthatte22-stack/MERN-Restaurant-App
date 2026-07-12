@@ -19,7 +19,12 @@ require("dotenv").config();
 connectDatabase();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 readdirSync(path.join(__dirname, "routes")).map((file) => {
   app.use("/api", require(`./routes/${file}`));
