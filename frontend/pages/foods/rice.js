@@ -10,7 +10,7 @@ const rice = () => {
     food: { data },
   } = useSelector((state) => state);
   const dispatch = useDispatch();
-  const riceItems = data.filter((item) => item.category === "rice");
+  const riceItems = data.filter((item) => item.category === "Rice");
 
   useEffect(() => {
     dispatch(fetchFoods());
