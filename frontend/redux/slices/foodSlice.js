@@ -17,7 +17,7 @@ const foodSlice = createSlice({
 export default foodSlice.reducer;
 
 export const fetchFoods = createAsyncThunk("Food/fetch", async () => {
-  const res = await fetch(`http://localhost:5000/api/foods`);
+  const res = await fetch(`https://mern-restaurant-app-sic2-qtpfoy8ta-mohanthatte22.vercel.app/api/foods`);
   const res2 = await res.json();
   return res2.foods;
 });
